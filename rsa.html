@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <title>RSA Encryption</title>
+        <meta name="viewport" content="width=device-width, initialscale=1.0">
+    </head>
+    <body>
+        <h1 style="text-align: center;">RSA Algorithm</h1>
+        <hr>
+        <table class="margin-left">
+            <tr>
+                <label>
+                    Step 1: Enter 2 prime numbers p, q and plaintext.
+                </label> 
+                <td>Enter P:</td>
+                <td><input type="number" value="53" id="p"></td>
+            </tr>
+            <tr>
+                <td>Enter Q :</td>
+                <td><input type="number" value="59" id="q"></p>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Enter the Message:</td>
+                <td>
+                    <input type="text" value="89" id="msg"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <button onclick="RSA();">Apply RSA</button>
+                </td>
+            </tr>
+            <!-- <tr>
+                <td>Public Key(N):</td> 
+                <td>
+                    <p id="publickey(N)"></p>
+                </td>
+            </tr> -->
+            <!-- <tr>
+                <td>Φ(n):</td>
+                <td>
+                    <p id="phi_of_n"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>Exponent(e):</td>
+                <td>
+                    <p id="exponent(e)"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>Private Key(d):</td>
+                <td>
+                    <p id="privatekey(d)"></p>
+                </td>
+            </tr>
+            <tr>
+                <td>Cipher Text(c):</td>
+                <td>
+                    <p id="ciphertext(ct)"></p>
+                </td>
+            </tr> -->
+        </table>
+    </body>
+    <style>
+        .center {
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style >
+        <!-- <script type="text/javascript"> -->
+    <script src="rsa.js">
+    </script>
+</html>

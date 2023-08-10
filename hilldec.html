@@ -1,0 +1,295 @@
+<html>
+<head>
+</head>
+<body>
+        <h1>Hill Cipher</h1><hr><hr><br>
+        <form>
+            <table>
+                <tr>
+                    <td>Message to decrypt:
+                    <td><input type="text" name="encode" value="7pmm4?r4pt5s26sxk2bxaetl" size=100 maxlength=500><br>
+                <tr>
+                    <td>Key:
+                    <td><input type="text" value="pranjal" size=25 maxlength=25 name="key"><br>
+                <tr>
+                    <td>Alphabet:
+                    <td><input type="text" value="_ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789.?,-" size=53 maxlength=53
+                            name="abet"><br>
+                <tr>
+                    <td>
+                    <td align="right"><button onclick="decrypt()">Submit</button>            
+            </table>
+        </form><hr><hr><br>
+    </center>
+    <script>
+        function decrypt()
+        {
+            document.write("<h1>Hill Cipher</h1><hr><hr><br>");
+            document.write("The Character Set of Hill Cipher has 41 characters:<p>");
+            document.write("    <table border=1>");
+            document.write("    <tr>");
+            document.write("            <td>_");
+            document.write("            <td>A");
+            document.write("            <td>B");
+            document.write("            <td>C");
+            document.write("            <td>D");
+            document.write("            <td>E");
+            document.write("            <td>F");
+            document.write("            <td>G");
+            document.write("            <td>H");
+            document.write("            <td>I");
+            document.write("            <td>J");
+            document.write("            <td>K");
+            document.write("            <td>L");
+            document.write("            <td>M");
+            document.write("            <td>N");
+            document.write("            <td>O");
+            document.write("            <td>P");
+            document.write("            <td>Q");
+            document.write("            <td>R");
+            document.write("            <td>S");
+            document.write("            <td>T");
+            document.write("            <td>U");
+            document.write("            <td>V");
+            document.write("            <td>W");
+            document.write("            <td>X");
+            document.write("            <td>Y");
+            document.write("            <td>Z");
+            document.write("            <td>0");
+            document.write("            <td>1");
+            document.write("            <td>2");
+            document.write("            <td>3");
+            document.write("            <td>4");
+            document.write("            <td>5");
+            document.write("            <td>6");
+            document.write("            <td>7");
+            document.write("            <td>8");
+            document.write("            <td>9");
+            document.write("            <td>.");
+            document.write("            <td>?");
+            document.write("            <td>,");
+            document.write("            <td>-");
+            document.write("        <tr>");
+            document.write("            <td>0");
+            document.write("            <td>1");
+            document.write("            <td>2");
+            document.write("            <td>3");
+            document.write("            <td>4");
+            document.write("            <td>5");
+            document.write("            <td>6");
+            document.write("            <td>7");
+            document.write("            <td>8");
+            document.write("            <td>9");
+            document.write("            <td>10");
+            document.write("            <td>11");
+            document.write("            <td>12");
+            document.write("            <td>13");
+            document.write("            <td>14");
+            document.write("            <td>15");
+            document.write("            <td>16");
+            document.write("            <td>17");
+            document.write("            <td>18");
+            document.write("            <td>19");
+            document.write("            <td>20");
+            document.write("            <td>21");
+            document.write("            <td>22");
+            document.write("            <td>23");
+            document.write("            <td>24");
+            document.write("            <td>25");
+            document.write("            <td>26");
+            document.write("            <td>27");
+            document.write("            <td>28");
+            document.write("            <td>29");
+            document.write("            <td>30");
+            document.write("            <td>31");
+            document.write("            <td>32");
+            document.write("            <td>33");
+            document.write("            <td>34");
+            document.write("            <td>35");
+            document.write("            <td>36");
+            document.write("            <td>37");
+            document.write("            <td>38");
+            document.write("            <td>39");
+            document.write("            <td>40");
+            document.write("    </table>");
+            document.write("    <p>The key PRANJAL corresponds to this encoding matrix:");
+            document.write("    <table>");
+            document.write("        <tr>");
+            document.write("            <td width=50px>");
+            document.write("            <td>A =");
+            document.write("            <td>");
+            document.write("                <table border=1>");
+            document.write("                    <tr>");
+            document.write("                        <td>16");
+            document.write("                        <td>18");
+            document.write("                        <td>1");
+            document.write("                    <tr>");
+            document.write("                        <td>14");
+            document.write("                        <td>10");
+            document.write("                        <td>1");
+            document.write("                    <tr>");
+            document.write("                        <td>12");
+            document.write("                        <td>1");
+            document.write("                        <td>2");
+            document.write("                </table>");
+            document.write("    </table>");
+            document.write("    <hr>");
+            document.write("    <h2>Decoding</h2>");
+            document.write("Invert the encoding matrix (mod 41) to get the decoding matrix:<table>");
+            document.write("    <tr>");
+            document.write("        <td width=50px>");
+            document.write("        <td>B =");
+            document.write("        <td>");
+            document.write("            <table border=1>");
+            document.write("                <tr>");
+            document.write("                    <td>13");
+            document.write("                    <td>30");
+            document.write("                    <td>40");
+            document.write("                <tr>");
+            document.write("                    <td>2");
+            document.write("                    <td>18");
+            document.write("                    <td>31");
+            document.write("                <tr>");
+            document.write("                    <td>3");
+            document.write("                    <td>16");
+            document.write("                    <td>32");
+            document.write("            </table>");
+            document.write("</table>");
+            document.write("To check, see that AB=I (mod 41).<table>");
+            document.write("    <tr>");
+            document.write("        <td width=50px>");
+            document.write("        <td>AB =");
+            document.write("        <td>");
+            document.write("            <table border=1>");
+            document.write("                <tr>");
+            document.write("                    <td>1");
+            document.write("                    <td>0");
+            document.write("                    <td>0");
+            document.write("                <tr>");
+            document.write("                    <td>0");
+            document.write("                    <td>1");
+            document.write("                    <td>0");
+            document.write("                <tr>");
+            document.write("                    <td>0");
+            document.write("                    <td>0");
+            document.write("                    <td>1");
+            document.write("            </table>");
+            document.write("</table>");
+            document.write("<p>The encoded message");
+            document.write("<div class='input'>");
+            document.write("    <pre><h2>7PMM4?R4PT5S26SXK2BXAETL</h2></pre>");
+            document.write("</div> corresponds to the message matrix:<table>");
+            document.write("    <tr>");
+            document.write("        <td width=50px>");
+            document.write("        <td>M =");
+            document.write("        <td>");
+            document.write("            <table border=1>");
+            document.write("                <tr>");
+            document.write("                    <td>34");
+            document.write("                    <td>16");
+            document.write("                    <td>13");
+            document.write("                    <td>13");
+            document.write("                    <td>31");
+            document.write("                    <td>38");
+            document.write("                    <td>18");
+            document.write("                    <td>31");
+            document.write("                <tr>");
+            document.write("                    <td>16");
+            document.write("                    <td>20");
+            document.write("                    <td>32");
+            document.write("                    <td>19");
+            document.write("                    <td>29");
+            document.write("                    <td>33");
+            document.write("                    <td>19");
+            document.write("                    <td>24");
+            document.write("                <tr>");
+            document.write("                    <td>11");
+            document.write("                    <td>29");
+            document.write("                    <td>2");
+            document.write("                    <td>24");
+            document.write("                    <td>1");
+            document.write("                    <td>5");
+            document.write("                    <td>20");
+            document.write("                    <td>12");
+            document.write("            </table>");
+            document.write("</table>");
+            document.write("<p>The decoded product matrix is:");
+            document.write("<table>");
+            document.write("    <tr>");
+            document.write("        <td width=50px>");
+            document.write("        <td>BM =");
+            document.write("        <td>");
+            document.write("            <table border=1>");
+            document.write("                <tr>");
+            document.write("                    <td>1362");
+            document.write("                    <td>1968");
+            document.write("                    <td>1209");
+            document.write("                    <td>1699");
+            document.write("                    <td>1313");
+            document.write("                    <td>1684");
+            document.write("                    <td>1604");
+            document.write("                    <td>1603");
+            document.write("                <tr>");
+            document.write("                    <td>697");
+            document.write("                    <td>1291");
+            document.write("                    <td>664");
+            document.write("                    <td>1112");
+            document.write("                    <td>615");
+            document.write("                    <td>825");
+            document.write("                    <td>998");
+            document.write("                    <td>866");
+            document.write("                <tr>");
+            document.write("                    <td>710");
+            document.write("                    <td>1296");
+            document.write("                    <td>615");
+            document.write("                    <td>1111");
+            document.write("                    <td>589");
+            document.write("                    <td>802");
+            document.write("                    <td>998");
+            document.write("                    <td>861");
+            document.write("            </table>");
+            document.write("</table>");
+            document.write("<p>which reduces to:");
+            document.write("<table>");
+            document.write("    <tr>");
+            document.write("        <td width=50px>");
+            document.write("        <td>BM (mod 41) =");
+            document.write("        <td>");
+            document.write("            <table border=1>");
+            document.write("                <tr>");
+            document.write("                    <td>9");
+            document.write("                    <td>0");
+            document.write("                    <td>20");
+            document.write("                    <td>18");
+            document.write("                    <td>1");
+            document.write("                    <td>3");
+            document.write("                    <td>5");
+            document.write("                    <td>4");
+            document.write("                <tr>");
+            document.write("                    <td>0");
+            document.write("                    <td>20");
+            document.write("                    <td>8");
+            document.write("                    <td>5");
+            document.write("                    <td>0");
+            document.write("                    <td>5");
+            document.write("                    <td>14");
+            document.write("                    <td>5");
+            document.write("                <tr>");
+            document.write("                    <td>13");
+            document.write("                    <td>25");
+            document.write("                    <td>0");
+            document.write("                    <td>4");
+            document.write("                    <td>15");
+            document.write("                    <td>23");
+            document.write("                    <td>14");
+            document.write("                    <td>0");
+            document.write("            </table>");
+            document.write("</table>");
+            document.write("<p>and corresponds to the decoded message:");
+            document.write("<div class='result'>");
+            document.write("    <pre><h2>I TRACED THE ENEMY DOWN</h2></pre>");
+            document.write("</div>");
+        }
+    </script>
+</body>
+</html>
